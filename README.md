@@ -1,11 +1,13 @@
 # Mocking: servicio de suscripciones
 
-Ejemplo para una demostración docente con JUnit Jupiter y Mockito. Basado en [GRISE-UPM/PROF-Mocking-Exercise-1](https://github.com/GRISE-UPM/PROF-Mocking-Exercise-1), commit `d861d495bf8678236763d7025044f9f419feccec`.
+Ejemplo para una demostración docente con JUnit Jupiter y Mockito. 
+Actualización de proyecto PROF-Mocking-Exercise-1
+Obtenido originalmente de: https://books.google.es/books?id=kas_zAEACAAJ.
 
 ## Entorno
 
 - JDK 21.
-- JUnit Jupiter 6.0.3 y Mockito 5.20.0, alineados con el ejemplo de Fibonacci utilizado en la clase.
+- JUnit Jupiter 6.0.3 y Mockito 5.20.0.
 - Maven Wrapper incluido: no hace falta instalar Maven por separado.
 - Para trabajar en VS Code, Extension Pack for Java con Test Runner for Java habilitado.
 
@@ -75,9 +77,7 @@ La configuración incluida en `.vscode/settings.json` usa el agente generado en 
 
 Se comprueba que el servicio solicita la entrega a los clientes adecuados. Estas pruebas no comprueban la entrega de un correo real.
 
-## Recorrido recomendado durante la clase
-
-Mostrar, en este orden, los métodos siguientes de `SubscriptionServiceTest`:
+## Métodos de `SubscriptionServiceTest`:
 
 1. `rechazaClienteNulo`: enlace con `assertThrows` de JUnit.
 2. `enviaMensajeAClienteConCorreo`: `when`, `thenReturn` y `verify`.
@@ -86,8 +86,6 @@ Mostrar, en este orden, los métodos siguientes de `SubscriptionServiceTest`:
 5. `propagaErrorAlConsultarCorreo`: `thenThrow` junto con `assertThrows`.
 6. `propagaErrorAlEntregarMensaje`: excepción en un método void con `doThrow`.
 7. `capturaContenidoMensajeEnviado`: `ArgumentCaptor`.
-
-Mostrar después uno de los métodos de `MockitoSpyTest` si el tiempo permite explicar llamadas reales y `doReturn`.
 
 Las pruebas restantes amplían los casos de negocio y ofrecen ejemplos de conteo, respuestas consecutivas y orden. Se pueden dejar disponibles para consulta.
 
