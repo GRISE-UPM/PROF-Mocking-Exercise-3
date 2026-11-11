@@ -1,0 +1,9 @@
+{
+    "java.test.config": {
+        "name": "Mockito-Java-21",
+        "vmArgs": [
+            "-javaagent:${workspaceFolder}/target/test-agent/mockito-agent.jar"
+        ]
+    },
+    "java.test.defaultConfig": "Mockito-Java-21"
+}
